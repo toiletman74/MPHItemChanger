@@ -17,3 +17,6 @@ After you're done changing any items you can use ndslazy to pack the files back 
 # Special Thanks
 
 to unknown and NoneGiven for writing **[MPHread](https://github.com/NoneGiven/MphRead)** (I read through their code to figure out how to change entities into different ones)
+
+
+also yes I do know it says MPHrando, thats what this project is gonna turn into so I didn't bother changing the name.
