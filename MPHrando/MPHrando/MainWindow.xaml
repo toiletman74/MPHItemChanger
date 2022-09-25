@@ -1,0 +1,89 @@
+﻿<Window x:Class="MPHrandomizer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MPHrandomizer"
+        mc:Ignorable="d"
+        Title="MPHItemChanger" Height="350" Width="300">
+    <Grid Margin="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height ="*"/>
+            <RowDefinition Height ="*"/>
+            <RowDefinition Height ="*"/>
+            <RowDefinition Height ="30"/>
+            <RowDefinition Height ="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width ="*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="fileSelect_btn" Click="fileSelect_click" Grid.Row="3">Select your Entities Folder</Button>
+        <Button x:Name ="randomize_btn" Click="randomize_click" Margin="0,5,0,0" Grid.Row="4">Pogify that item</Button>
+        <TextBlock x:Name ="textblock" Grid.Column="0" HorizontalAlignment="Center" Margin="0,20,0,0" Grid.Row="0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBlock Grid.Column="0" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Location to change" VerticalAlignment="Top"/>
+        <TextBlock Grid.Column="0" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Item to change to" VerticalAlignment="Top"/>
+        <ComboBox x:Name ="itemSelector" Grid.Column="0" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="120">
+            <ComboBoxItem>None</ComboBoxItem>
+            <ComboBoxItem>HealthMedium</ComboBoxItem>
+            <ComboBoxItem>HealthSmall</ComboBoxItem>
+            <ComboBoxItem>HealthBig</ComboBoxItem>
+            <ComboBoxItem>DoubleDamage</ComboBoxItem>
+            <ComboBoxItem>EnergyTank</ComboBoxItem>
+            <ComboBoxItem>VoltDriver</ComboBoxItem>
+            <ComboBoxItem>MissileExpansion</ComboBoxItem>
+            <ComboBoxItem>Battlehammer</ComboBoxItem>
+            <ComboBoxItem>Imperialist</ComboBoxItem>
+            <ComboBoxItem>Judicator</ComboBoxItem>
+            <ComboBoxItem>Magmaul</ComboBoxItem>
+            <ComboBoxItem>ShockCoil</ComboBoxItem>
+            <ComboBoxItem>OmegaCannon</ComboBoxItem>
+            <ComboBoxItem>UASmall</ComboBoxItem>
+            <ComboBoxItem>UABig</ComboBoxItem>
+            <ComboBoxItem>MissileSmall</ComboBoxItem>
+            <ComboBoxItem>MissileBig</ComboBoxItem>
+            <ComboBoxItem>Cloak</ComboBoxItem>
+            <ComboBoxItem>UAExpansion</ComboBoxItem>
+            <ComboBoxItem>ArtifactKey</ComboBoxItem>
+            <ComboBoxItem>Deathalt</ComboBoxItem>
+            <ComboBoxItem>AffinityWeapon</ComboBoxItem>
+            <ComboBoxItem>PickWpnMissile</ComboBoxItem>
+        </ComboBox>
+        <ComboBox x:Name ="locationSelector" Grid.Column="0" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="120">
+            <ComboBoxItem>CA(DataShrine02)VoltDriver</ComboBoxItem>
+            <ComboBoxItem>CA(IncubationVault02)ShockCoil</ComboBoxItem>
+            <ComboBoxItem>CA(DataShrine01)EnergyTank</ComboBoxItem>
+            <ComboBoxItem>CA(NewArrivalRegistration)EnergyTank</ComboBoxItem>
+            <ComboBoxItem>CA(DataShrine02)MissileExpansion</ComboBoxItem>
+            <ComboBoxItem>CA(IncubationVault03)MissileExpansion</ComboBoxItem>
+            <ComboBoxItem>CA(CelestialGateway)UniversalAmmoExpansion</ComboBoxItem>
+            <ComboBoxItem>CA(DataShrine02)UniversalAmmoExpansion</ComboBoxItem>
+            <ComboBoxItem>CA(TransferLock)UniversalAmmoExpansion</ComboBoxItem>
+            <ComboBoxItem>CA(DockingBay)UniversalAmmoExpansion</ComboBoxItem>
+            <ComboBoxItem>AL(CouncilChamber)Magmaul</ComboBoxItem>
+            <ComboBoxItem>AL(EchoHall)EnergyTank</ComboBoxItem>
+            <ComboBoxItem>AL(CouncilChamber)EnergyTank</ComboBoxItem>
+            <ComboBoxItem>AL(AlinosGateway)MissileExpansion</ComboBoxItem>
+            <ComboBoxItem>AL(HighGround)MissileExpansion</ComboBoxItem>
+            <ComboBoxItem>AL(AlinosPerch)MissileExpansion</ComboBoxItem>
+            <ComboBoxItem>AL(MagmaDrop)UniversalAmmoExpansion</ComboBoxItem>
+            <ComboBoxItem>AL(ProcessorCore)UniversalAmmoExpansion</ComboBoxItem>
+            <ComboBoxItem>VDO(CortexCPU)Battlehammer</ComboBoxItem>
+            <ComboBoxItem>VDO(CortexCPU)MissileExpansion</ComboBoxItem>
+            <ComboBoxItem>VDO(FuelStack)MissileExpansion</ComboBoxItem>
+            <ComboBoxItem>VDO(CompressionChamber)UniversalAmmoExpansion</ComboBoxItem>
+            <ComboBoxItem>VDO(StasisBunker)UniversalAmmoExpansion</ComboBoxItem>
+            <ComboBoxItem>ARC(IceHive)Judicator</ComboBoxItem>
+            <ComboBoxItem>ARC(FaultLine)Imperialist</ComboBoxItem>
+            <ComboBoxItem>ARC(SicTransit)EnergyTank</ComboBoxItem>
+            <ComboBoxItem>ARC(FrostLabyrinth)EnergyTank</ComboBoxItem>
+            <ComboBoxItem>ARC(IceHive)MissileExpansion</ComboBoxItem>
+            <ComboBoxItem>ARC(Subterranean)MissileExpansion</ComboBoxItem>
+            <ComboBoxItem>ARC(IceHive)UniversalAmmoExpansion</ComboBoxItem>
+            <ComboBoxItem>ARC(IceHive)UniversalAmmoExpansion</ComboBoxItem>
+            <ComboBoxItem>ARC(Sanctorus)UniversalAmmoExpansion</ComboBoxItem>
+            <ComboBoxItem>ARC(DripMoat)UniversalAmmoExpansion</ComboBoxItem>
+            <ComboBoxItem>O(GoreaPeek)EnergyTank</ComboBoxItem>
+        </ComboBox>
+    </Grid>
+</Window>
