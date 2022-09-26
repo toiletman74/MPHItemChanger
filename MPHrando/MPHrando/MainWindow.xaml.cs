@@ -113,7 +113,7 @@ namespace MPHrandomizer
                         break;
                     case 18:
                         FilePath.fileName = "\\Unit3_C2_Ent.bin";
-                        location = 2119;
+                        location = 2124;
                         break;
                     case 19:
                         FilePath.fileName = "\\Unit3_C2_Ent.bin";
